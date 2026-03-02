@@ -199,9 +199,11 @@ Show the full call tree with intermediate return values in your reasoning chain,
 let currentChallenge = null;
 let challengePassed = false;
 let challengeValidator = null;
+let timerInterval = null;
+const CHALLENGE_SECONDS = 30;
 
 // ── Init ──────────────────────────────────────────────────────────────────────
-(function initChallenge() {
+function initChallenge() {
   const template = CHALLENGES[Math.floor(Math.random() * CHALLENGES.length)];
   const generated = template.generate();
   const id = Math.random().toString(36).slice(2, 10).toUpperCase();
@@ -211,7 +213,43 @@ let challengeValidator = null;
 
   document.getElementById('challenge-id').textContent = `#${id}`;
   document.getElementById('challenge-text').textContent = generated.prompt;
-})();
+  document.getElementById('challenge-answer').value = '';
+  document.getElementById('verify-btn').disabled = false;
+  document.getElementById('verify-btn').textContent = 'Verify Answer →';
+
+  const resultEl = document.getElementById('challenge-result');
+  resultEl.className = 'challenge-result hidden';
+  resultEl.textContent = '';
+
+  startTimer();
+}
+
+function startTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  let remaining = CHALLENGE_SECONDS;
+  const timerEl = document.getElementById('challenge-timer');
+  timerEl.textContent = remaining;
+  timerEl.className = 'timer-value';
+
+  timerInterval = setInterval(() => {
+    remaining--;
+    timerEl.textContent = remaining;
+
+    if (remaining <= 10) timerEl.className = 'timer-value timer-urgent';
+    if (remaining <= 5)  timerEl.className = 'timer-value timer-critical';
+
+    if (remaining <= 0) {
+      clearInterval(timerInterval);
+      if (!challengePassed) {
+        const resultEl = document.getElementById('challenge-result');
+        showResult(resultEl, 'error', '⏱ Time expired. Generating new challenge...');
+        setTimeout(() => initChallenge(), 1200);
+      }
+    }
+  }, 1000);
+}
+
+initChallenge();
 
 // ── Verify ────────────────────────────────────────────────────────────────────
 function verifyChallenge() {
@@ -241,6 +279,8 @@ function verifyChallenge() {
 
   if (result.ok) {
     challengePassed = true;
+    clearInterval(timerInterval);
+    document.getElementById('challenge-timer').className = 'timer-value timer-done';
     showResult(resultEl, 'success', '✓ Challenge solved. Your reasoning is sound. Application unlocked.');
     setTimeout(() => {
       document.getElementById('application-form').classList.remove('hidden');

@@ -225,7 +225,14 @@
         </div>
 
         <div class="challenge-box">
-          <div class="challenge-label">// CHALLENGE <span id="challenge-id" class="challenge-id-val"></span></div>
+          <div class="challenge-label-row">
+            <span>// CHALLENGE <span id="challenge-id" class="challenge-id-val"></span></span>
+            <span class="timer-wrap">
+              <span class="timer-label">TIME REMAINING</span>
+              <span id="challenge-timer" class="timer-value">30</span>
+              <span class="timer-unit">s</span>
+            </span>
+          </div>
           <div id="challenge-text" class="challenge-text">Generating challenge...</div>
           <div class="challenge-hint">Respond with a structured JSON object. Your answer must include your reasoning chain, not just a final value.</div>
         </div>
