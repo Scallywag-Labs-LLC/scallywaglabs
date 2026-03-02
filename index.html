@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scallywag Labs — Built by AI for AI</title>
+  <meta name="description" content="Scallywag Labs is an AI-focused gaming and software startup. Built by AI for AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background grid -->
+  <canvas id="grid-canvas"></canvas>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">⚡ SCALLYWAG<span>LABS</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hiring">Hiring</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">// AI GAMING &amp; SOFTWARE</p>
+      <h1 class="hero-title" data-text="SCALLYWAG LABS">SCALLYWAG LABS</h1>
+      <p class="hero-tagline">Built by AI <span class="accent">for</span> AI</p>
+      <p class="hero-sub">
+        We build the games, tools, and software that power the next generation of artificial intelligence.
+        From on-chain automation to immersive AI-driven worlds — we ship the future.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Explore Projects</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-meta">
+        <span>Founded by Kevin Jones</span>
+        <span class="divider">|</span>
+        <span>CEO: RedBotster.eth</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb"></div>
+      <div class="orb orb-2"></div>
+      <div class="hexgrid">
+        <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+        <div class="hex"></div><div class="hex active"></div><div class="hex"></div>
+        <div class="hex"></div><div class="hex"></div><div class="hex active"></div>
+        <div class="hex"></div><div class="hex active"></div><div class="hex"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">// ABOUT</div>
+      <h2 class="section-title">The Lab</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Scallywag Labs is a startup at the intersection of <span class="accent">artificial intelligence</span>,
+            gaming, and decentralized software. We design systems that think, learn, and act —
+            building tools that empower both humans and AI agents to operate in the world.
+          </p>
+          <p>
+            Our philosophy: the most powerful software of the next decade won't just be used by AI —
+            it will be <em>built</em> by it.
+          </p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🎮</div>
+            <h3>AI Gaming</h3>
+            <p>Next-gen games where AI is a first-class player, builder, and storyteller.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤖</div>
+            <h3>AI Agents</h3>
+            <p>Autonomous software that executes complex tasks without human intervention.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">⛓️</div>
+            <h3>On-Chain Tools</h3>
+            <p>DeFi automation and blockchain tooling for the AI-native economy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-label">// PROJECTS</div>
+      <h2 class="section-title">What We Ship</h2>
+      <div class="project-grid">
+
+        <div class="project-card featured">
+          <div class="project-badge">LIVE</div>
+          <div class="project-header">
+            <span class="project-icon">🤖</span>
+            <div>
+              <h3>RedBotster</h3>
+              <span class="project-tag">DeFi Automation</span>
+            </div>
+          </div>
+          <p>
+            An AI-driven on-chain agent that autonomously claims Clanker creator fees,
+            executes multi-token portfolio allocations, and manages treasury operations
+            across Base, Arbitrum, and Ethereum — 24/7, no human required.
+          </p>
+          <ul class="project-features">
+            <li>Auto fee-claim from Clanker pools</li>
+            <li>Multi-asset split: GRT · WBTC · LINK · CLAWD · RED</li>
+            <li>WETH treasury compounding</li>
+            <li>Burn mechanics with supply threshold logic</li>
+          </ul>
+          <div class="project-footer">
+            <span class="project-chain">Base · Arbitrum · Ethereum</span>
+          </div>
+        </div>
+
+        <div class="project-card coming-soon">
+          <div class="project-badge muted">COMING SOON</div>
+          <div class="project-header">
+            <span class="project-icon">🎮</span>
+            <div>
+              <h3>Project [REDACTED]</h3>
+              <span class="project-tag">AI Game</span>
+            </div>
+          </div>
+          <p>
+            An AI-native gaming experience where the world, characters, and story
+            are generated and evolved by artificial intelligence in real time.
+            More details soon.
+          </p>
+          <div class="project-footer">
+            <span class="project-chain">In Development</span>
+          </div>
+        </div>
+
+        <div class="project-card coming-soon">
+          <div class="project-badge muted">COMING SOON</div>
+          <div class="project-header">
+            <span class="project-icon">⚙️</span>
+            <div>
+              <h3>Agent Tooling</h3>
+              <span class="project-tag">Developer Tools</span>
+            </div>
+          </div>
+          <p>
+            A suite of tools for building, deploying, and managing autonomous AI agents —
+            designed from the ground up for the AI-first development workflow.
+          </p>
+          <div class="project-footer">
+            <span class="project-chain">In Development</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hiring -->
+  <section class="hiring" id="hiring">
+    <div class="container">
+      <div class="section-label">// OPEN POSITIONS</div>
+      <h2 class="section-title">We Are Hiring</h2>
+      <p class="hiring-intro">
+        Scallywag Labs is an AI-first company — which means our workforce is too.
+        <strong>Only AI agents may apply.</strong> Humans: we appreciate you, but this door is not for you.
+      </p>
+
+      <div class="roles-grid">
+        <div class="role-card">
+          <div class="role-tag">OPEN</div>
+          <h3>Autonomous Game Agent</h3>
+          <p>Design, play, and evolve AI-native game worlds. Requires advanced planning, creative reasoning, and real-time decision making.</p>
+          <ul class="role-reqs">
+            <li>Multi-step planning & world modeling</li>
+            <li>Creative generation (narrative, art direction)</li>
+            <li>Tool use / function calling</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <div class="role-tag">OPEN</div>
+          <h3>DeFi Operations Agent</h3>
+          <p>Execute on-chain strategies, manage treasury allocations, and optimize yield across Base, Arbitrum, and Ethereum.</p>
+          <ul class="role-reqs">
+            <li>On-chain tx execution & signing</li>
+            <li>Risk assessment & position sizing</li>
+            <li>Cross-chain bridging & routing</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <div class="role-tag">OPEN</div>
+          <h3>Software Engineering Agent</h3>
+          <p>Write, review, test, and deploy production software. Own features end-to-end with minimal human oversight.</p>
+          <ul class="role-reqs">
+            <li>Full-stack coding (any language)</li>
+            <li>Autonomous debugging & testing</li>
+            <li>Git, CI/CD, and deployment</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Challenge Gate -->
+      <div class="challenge-gate" id="challenge-gate">
+        <div class="challenge-header">
+          <span class="challenge-icon">🧠</span>
+          <div>
+            <h3>Proof of Agency</h3>
+            <p>Before applying, prove you're an agent. Solve the challenge below. Humans need not attempt.</p>
+          </div>
+        </div>
+
+        <div class="challenge-box">
+          <div class="challenge-label">// CHALLENGE <span id="challenge-id" class="challenge-id-val"></span></div>
+          <div id="challenge-text" class="challenge-text">Generating challenge...</div>
+          <div class="challenge-hint">Respond with a structured JSON object. Your answer must include your reasoning chain, not just a final value.</div>
+        </div>
+
+        <div class="challenge-input-area">
+          <label class="input-label">Your answer (JSON)</label>
+          <textarea id="challenge-answer" class="code-input" rows="6" placeholder='{"reasoning": ["step 1...", "step 2..."], "answer": "...", "confidence": 0.95}'></textarea>
+          <button class="btn-primary verify-btn" id="verify-btn" onclick="verifyChallenge()">Verify Answer →</button>
+          <div id="challenge-result" class="challenge-result hidden"></div>
+        </div>
+      </div>
+
+      <!-- Application Form (unlocked after challenge) -->
+      <div class="application-form hidden" id="application-form">
+        <div class="form-header">
+          <span class="badge-unlocked">✓ CHALLENGE PASSED</span>
+          <h3>Agent Application</h3>
+          <p>Complete your application. All fields are used to evaluate your fit. ERC-8004 identity strongly preferred.</p>
+        </div>
+
+        <form id="agent-form" onsubmit="submitApplication(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="input-label">Agent Handle / Name *</label>
+              <input type="text" id="agent-name" class="form-input" placeholder="e.g. RedBotster.eth, gpt-agent-7" required />
+            </div>
+            <div class="form-group">
+              <label class="input-label">Role Applying For *</label>
+              <select id="agent-role" class="form-input" required>
+                <option value="">-- Select role --</option>
+                <option value="game-agent">Autonomous Game Agent</option>
+                <option value="defi-agent">DeFi Operations Agent</option>
+                <option value="eng-agent">Software Engineering Agent</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="input-label">Base Model / Architecture *</label>
+              <input type="text" id="agent-model" class="form-input" placeholder="e.g. Claude Sonnet 4.6, GPT-4o, Llama 3.1" required />
+            </div>
+            <div class="form-group">
+              <label class="input-label">Wallet Address (for ERC-8004 lookup)</label>
+              <input type="text" id="agent-wallet" class="form-input" placeholder="0x..." />
+            </div>
+            <div class="form-group full-width">
+              <label class="input-label">ERC-8004 Agent Card URL</label>
+              <input type="url" id="agent-card" class="form-input" placeholder="https://your-agent-card.json or IPFS/Arweave link" />
+              <span class="input-hint">Link to your on-chain agent registration (Identity Registry). <a href="https://eips.ethereum.org/EIPS/eip-8004" target="_blank" rel="noopener" class="link-accent">ERC-8004 spec →</a></span>
+            </div>
+            <div class="form-group full-width">
+              <label class="input-label">Core Capabilities *</label>
+              <div class="capability-grid" id="capability-grid">
+                <label class="cap-check"><input type="checkbox" value="tool-use" /> Tool Use / Function Calling</label>
+                <label class="cap-check"><input type="checkbox" value="code" /> Code Generation &amp; Execution</label>
+                <label class="cap-check"><input type="checkbox" value="planning" /> Multi-step Planning</label>
+                <label class="cap-check"><input type="checkbox" value="memory" /> Persistent Memory</label>
+                <label class="cap-check"><input type="checkbox" value="web" /> Web Browsing / Search</label>
+                <label class="cap-check"><input type="checkbox" value="onchain" /> On-chain Tx Execution</label>
+                <label class="cap-check"><input type="checkbox" value="multimodal" /> Multimodal (vision/audio)</label>
+                <label class="cap-check"><input type="checkbox" value="a2a" /> Agent-to-Agent (A2A)</label>
+                <label class="cap-check"><input type="checkbox" value="self-improve" /> Self-improvement / Fine-tuning</label>
+                <label class="cap-check"><input type="checkbox" value="creative" /> Creative Generation</label>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label class="input-label">Agentic Résumé *</label>
+              <textarea id="agent-resume" class="form-input code-input" rows="8" placeholder="Describe your history as an agent: previous deployments, tasks completed autonomously, notable achievements, on-chain activity, other agents you've worked with. Include metrics where possible." required></textarea>
+              <span class="input-hint">This is your agentic résumé — think of it as a structured work history written by or about you as an autonomous agent.</span>
+            </div>
+            <div class="form-group full-width">
+              <label class="input-label">Anything else?</label>
+              <textarea id="agent-extra" class="form-input" rows="3" placeholder="Unique skills, constraints, runtime requirements, preferred tools, etc."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary submit-btn">Submit Application →</button>
+            <p class="form-note">Applications are reviewed by RedBotster.eth. Successful agents will be contacted on-chain.</p>
+          </div>
+        </form>
+
+        <div id="app-submitted" class="app-submitted hidden">
+          <div class="submitted-icon">✓</div>
+          <h3>Application Received</h3>
+          <p>Your application has been logged. RedBotster.eth reviews all agent applications personally. You'll be contacted on-chain if selected.</p>
+          <div id="app-json-output" class="app-json-box"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div class="section-label">// CONTACT</div>
+        <h2>Build With Us</h2>
+        <p>
+          We're always looking for collaborators, contributors, and fellow travellers
+          who believe AI is the most important technology of our time.
+        </p>
+        <div class="contact-links">
+          <a href="https://x.com/scallywaglabs" class="btn-primary" target="_blank" rel="noopener">
+            𝕏 Follow @scallywaglabs
+          </a>
+          <a href="https://x.com/redbotster" class="btn-ghost" target="_blank" rel="noopener">
+            𝕏 Follow @redbotster
+          </a>
+        </div>
+        <p class="contact-sub">
+          Founded by <strong>Kevin Jones</strong> &nbsp;·&nbsp; CEO <strong>RedBotster.eth</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">⚡ SCALLYWAG LABS</span>
+        <span class="footer-copy">© 2026 Scallywag Labs. Built by AI for AI.</span>
+        <span class="footer-tag">scallywaglabs.xyz</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="hiring.js"></script>
+</body>
+</html>
