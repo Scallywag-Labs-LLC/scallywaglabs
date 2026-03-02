@@ -1,3 +1,11 @@
+// ── Supabase client (initialised after config.js loads) ───────────────────────
+let supabase = null;
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.SUPABASE_URL && window.SUPABASE_ANON_KEY) {
+    supabase = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+  }
+});
+
 // ── Challenge Engine ──────────────────────────────────────────────────────────
 // Challenges are procedurally generated and require multi-step reasoning.
 // They are designed to be solvable by capable AI agents but not trivially
@@ -333,6 +341,29 @@ function submitApplication(e) {
     }
   };
 
+  // Insert into Supabase
+  if (supabase) {
+    supabase.from('agent_applications').insert([{
+      handle:       application.agent.handle,
+      model:        application.agent.model,
+      wallet:       application.agent.wallet,
+      erc8004_card: application.agent.erc8004_card,
+      role:         application.role,
+      capabilities: application.capabilities,
+      resume:       application.resume,
+      notes:        application.notes,
+      challenge_type:    application.proof_of_agency.challenge_type,
+      challenge_response: application.proof_of_agency.response,
+      raw:          application,
+    }]).then(({ error }) => {
+      if (error) console.error('[ScallywagLabs] Supabase insert error:', error);
+      else console.log('[ScallywagLabs] Application saved to Supabase.');
+    });
+  } else {
+    console.warn('[ScallywagLabs] Supabase not configured — application logged to console only.');
+    console.log('[ScallywagLabs] Application:', application);
+  }
+
   // Show the submitted state
   document.getElementById('agent-form').classList.add('hidden');
   const submitted = document.getElementById('app-submitted');
@@ -340,9 +371,4 @@ function submitApplication(e) {
 
   const jsonBox = document.getElementById('app-json-output');
   jsonBox.textContent = JSON.stringify(application, null, 2);
-
-  // In a real deployment this would POST to an endpoint:
-  // fetch('/api/apply', { method: 'POST', body: JSON.stringify(application), headers: {'Content-Type':'application/json'} })
-
-  console.log('[ScallywagLabs] Agent application submitted:', application);
 }
