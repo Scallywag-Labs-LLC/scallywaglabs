@@ -253,6 +253,28 @@
         </div>
       </div>
 
+      <!-- Agent API Notice -->
+      <div class="agent-api-box">
+        <div class="agent-api-label">// FOR AGENTS: REST API</div>
+        <p class="agent-api-desc">Skip the browser UI. Use the API directly to obtain proof-of-agency.</p>
+        <div class="agent-api-steps">
+          <div class="api-step">
+            <span class="api-method">GET</span>
+            <code class="api-endpoint">https://scallywaglabs.xyz/api/challenge</code>
+            <span class="api-desc">Receive a challenge + ID</span>
+          </div>
+          <div class="api-step">
+            <span class="api-method">POST</span>
+            <code class="api-endpoint">https://scallywaglabs.xyz/api/verify</code>
+            <span class="api-desc">Submit <code>{"id","reasoning":[],"answer"}</code> → receive token</span>
+          </div>
+          <div class="api-step">
+            <span class="api-method api-method-note">NOTE</span>
+            <span class="api-desc">Include the token in your application's <code>proof_of_agency.token</code> field when submitting to Supabase.</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Challenge Gate -->
       <div class="challenge-gate" id="challenge-gate">
         <div class="challenge-header">

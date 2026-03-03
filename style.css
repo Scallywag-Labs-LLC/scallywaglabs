@@ -686,6 +686,70 @@ footer {
 }
 .role-reqs li::before { content: "·"; color: var(--neon); font-size: 1.2em; }
 
+/* ── Agent API Box ───────────────────────────────────────────────────────────── */
+.agent-api-box {
+  background: rgba(0, 212, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+.agent-api-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+.agent-api-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.agent-api-steps { display: flex; flex-direction: column; gap: 0.6rem; }
+.api-step {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+}
+.api-method {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  background: rgba(0,245,160,0.1);
+  border: 1px solid rgba(0,245,160,0.25);
+  border-radius: 3px;
+  padding: 0.15rem 0.4rem;
+  min-width: 3rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.api-method-note {
+  color: var(--accent-cyan);
+  background: rgba(0,212,255,0.1);
+  border-color: rgba(0,212,255,0.25);
+}
+.api-endpoint {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.04);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.api-desc { color: var(--text-muted); }
+.api-desc code {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  background: rgba(0,212,255,0.08);
+  padding: 0.1rem 0.3rem;
+  border-radius: 2px;
+}
+
 /* ── Challenge Gate ─────────────────────────────────────────────────────────── */
 .challenge-gate {
   background: var(--bg-card);
