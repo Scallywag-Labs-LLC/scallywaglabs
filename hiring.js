@@ -257,11 +257,7 @@ function startTimer() {
   }, 1000);
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initChallenge);
-} else {
-  initChallenge();
-}
+initChallenge();
 
 // ── Verify ────────────────────────────────────────────────────────────────────
 function verifyChallenge() {
